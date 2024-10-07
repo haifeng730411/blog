@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的简单网站</title>
+    <title>问答网站</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .question { border: 1px solid #ddd; padding: 10px; margin-bottom: 20px; }
+        .question h2 { margin-top: 0; }
+        .meta { color: #666; font-size: 0.9em; }
+        form { margin-bottom: 20px; }
+        input[type="text"], textarea { width: 100%; padding: 5px; margin-bottom: 10px; }
+        input[type="submit"] { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+    </style>
 </head>
 <body>
-    <h1>欢迎来到我的网站!</h1>
-    <p>这是一个最简单的网站示例。</p>
-    
-    <!-- 添加图片 -->
-    <img src="morning.jpg" alt="描述图片" style="max-width: 100%; height: auto;">
+    <h1>问答网站</h1>
+    <form id="questionForm">
+        <input type="text" id="title" placeholder="问题标题" required>
+        <textarea id="content" placeholder="问题内容" required></textarea>
+        <input type="submit" value="提交问题">
+    </form>
+    <div id="questions">
+        <!-- 问题将通过JavaScript动态插入这里 -->
+    </div>
+    <script src="static/script.js"></script>
 </body>
 </html>
